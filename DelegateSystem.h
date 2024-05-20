@@ -125,12 +125,12 @@ std::list<FDelegateType9> Delegates;};
 
 #define DECLARE_DELEGATE_10(DelegateName, DataType1, Var1, DataType2, Var2, DataType3, Var3, DataType4, Var4, DataType5, Var5, DataType6, Var6, DataType7, Var7, DataType8, Var8, DataType9, Var9, DataType10, Var10)struct DelegateName{\
 /*Example for Args: uint8_t, DeviceType, const float, Value*/\
-using FDelegateType0 = void (*)();\
-void Bind(FDelegateType0 FunctionToBind) { Delegates.push_back(FunctionToBind); }\
+using FDelegateType10 = void (*)();\
+void Bind(FDelegateType10 FunctionToBind) { Delegates.push_back(FunctionToBind); }\
 void UnbindAll() { Delegates.clear(); }\
-void Unbind(FDelegateType0 FunctionToUnbind){\
+void Unbind(FDelegateType10 FunctionToUnbind){\
 Delegates.remove(FunctionToUnbind);}\
 void Invoke(DataType1 Var1, DataType2 Var2, DataType3 Var3, DataType4 Var4, DataType5 Var5, DataType6 Var6, DataType7 Var7, DataType8 Var8, DataType9 Var9, DataType10 Var10){\
-for (FDelegateType0 Delg : Delegates){Delg(Var1, Var2, Var3, Var4, Var5, Var6, Var7, Var8, Var9, Var10);}}\
+for (FDelegateType10 Delg : Delegates){Delg(Var1, Var2, Var3, Var4, Var5, Var6, Var7, Var8, Var9, Var10);}}\
 private:\
-std::list<FDelegateType0> Delegates;};
+std::list<FDelegateType10> Delegates;};
